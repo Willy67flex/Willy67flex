@@ -11,7 +11,7 @@
 
 > Réimplémentation d'un shell bash-like en C, avec gestion des pipes, redirections, variables d'environnement, et builtins.
 
-*Projet réalisé en binôme avec [ele-moig](https://github.com/ele-moig)*
+*Projet réalisé en binôme avec [ele-moig](https://github.com/noceolo)*
 
 ---
 
