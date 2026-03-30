@@ -6,7 +6,7 @@
 /*   By: whollebe <whollebe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 14:35:56 by ele-moig          #+#    #+#             */
-/*   Updated: 2026/01/27 10:18:13 by whollebe         ###   ########.fr       */
+/*   Updated: 2026/03/19 11:54:09 by whollebe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <ctype.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include "ft_printf.h"
+# include "get_next_line.h"
 
 typedef struct s_list
 {

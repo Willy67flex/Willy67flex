@@ -3,24 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ele-moig <ele-moig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: whollebe <whollebe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:14:24 by ele-moig          #+#    #+#             */
-/*   Updated: 2025/10/20 10:49:33 by ele-moig         ###   ########.fr       */
+/*   Updated: 2026/03/23 16:50:31 by whollebe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -63,26 +53,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		newstr[i++] = *s2++;
 	newstr[i] = '\0';
 	return (newstr);
-}
-
-char	*ft_strdup(const char *s)
-{
-	char	*dest;
-	char	*str;
-	int		i;
-
-	i = 0;
-	str = (char *)s;
-	dest = malloc(ft_strlen(str) + 1);
-	if (!dest)
-		return (NULL);
-	while (str[i])
-	{
-		dest[i] = str[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
 }
 
 char	*ft_strchr(const char *s, int c)

@@ -1,0 +1,44 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_input.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: whollebe <whollebe@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/20 10:21:31 by whollebe          #+#    #+#             */
+/*   Updated: 2026/03/26 15:44:36 by whollebe         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "cub3d.h"
+
+void	check_syntax(char *str)
+{
+	int	i;
+	int	size;
+
+	size = ft_strlen(str);
+	if (size < 5)
+		msg_error("Usage-> \"./cub3D path/to/the/map.cub\"");
+	i = size - 4;
+	if (strncmp(".cub\0", &str[i], 5) != 0)
+		msg_error("Usage-> \"./cub3D path/to/the/map.cub\"");
+}
+
+void	check_file(t_game *game, char *str)
+{
+	int	line;
+
+	game->map_height = 0;
+	line = check_map_description(game, str);
+	fill_map(game, str, line);
+	scan_map(game);
+}
+
+void	check_input(char *str, t_game *game, int argc)
+{
+	if (argc != 2)
+		msg_error("Usage-> \"./cub3D path/to/the/map.cub\"");
+	check_syntax(str);
+	check_file(game, str);
+}

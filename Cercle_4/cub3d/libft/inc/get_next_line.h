@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ele-moig <ele-moig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: whollebe <whollebe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:12:58 by ele-moig          #+#    #+#             */
-/*   Updated: 2025/10/30 13:52:29 by ele-moig         ###   ########.fr       */
+/*   Updated: 2026/03/24 14:38:09 by whollebe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ char	*ft_strchr(const char *s, int c);
 char	*get_next_line(int fd);
 char	*fill_buffer(int fd, char *buffer, char **leftover);
 char	*trim_line(char *to_trim);
+void	clean_gnl(int fd);
 
 #endif
