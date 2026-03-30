@@ -26,6 +26,8 @@ void	init_game(t_game *game)
 	game->key_s = 0;
 	game->key_d = 0;
 	game->key_shift = 0;
+	game->key_left = 0;
+	game->key_right = 0;
 }
 
 void	init_map_cont(t_game *game)

@@ -42,6 +42,8 @@ typedef	struct s_imgb	t_imgb;
 # define KEY_S 115
 # define KEY_D 100
 # define KEY_SHIFT 65505
+# define KEY_LEFT 65361
+# define KEY_RIGHT 65363
 
 typedef struct s_sprites
 {
@@ -139,6 +141,8 @@ typedef struct s_game
 	int				key_w;
 	int				key_s;
 	int				key_a;
+	int				key_left;
+	int				key_right;
 	int				key_d;
 	int				key_shift;
 }	t_game;

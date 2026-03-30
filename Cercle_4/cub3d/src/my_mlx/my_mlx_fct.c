@@ -8,6 +8,8 @@ int	key_press(int keycode, t_game *game)
 	if (keycode == KEY_A) game->key_a = 1;
 	if (keycode == KEY_D) game->key_d = 1;
 	if (keycode == KEY_SHIFT) game->key_shift = 1;
+	if (keycode == KEY_LEFT) game->key_left = 1;
+	if (keycode == KEY_RIGHT) game->key_right = 1;
 	return (0);
 }
 
@@ -18,6 +20,8 @@ int	key_release(int keycode, t_game *game)
 	if (keycode == KEY_A) game->key_a = 0;
 	if (keycode == KEY_D) game->key_d = 0;
 	if (keycode == KEY_SHIFT) game->key_shift = 0;
+	if (keycode == KEY_LEFT) game->key_left = 0;
+	if (keycode == KEY_RIGHT) game->key_right = 0;
 	return (0);
 }
 
@@ -58,10 +62,17 @@ void	run_game(t_game	*game)
 
 int	render_frame(t_game *game)
 {
+	double	rot_speed;
+
+	rot_speed = 0.02;
 	if (game->key_w) move_forward(game);
 	if (game->key_s) move_backward(game);
 	if (game->key_a) strafe_left(game);
 	if (game->key_d) strafe_right(game);
+	if (game->key_left)
+		rotation_matrice(game, -rot_speed);
+	if (game->key_right)
+		rotation_matrice(game, rot_speed);
 	draw_floor_and_ceiling(game);
 	raycasting(game);
 	draw_minimap(game);
