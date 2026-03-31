@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init.h                                             :+:      :+:    :+:   */
+/*   door.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ele-moig <ele-moig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/26 13:55:34 by ele-moig          #+#    #+#             */
-/*   Updated: 2026/03/31 14:24:54 by ele-moig         ###   ########.fr       */
+/*   Created: 2026/03/31 09:47:52 by whollebe          #+#    #+#             */
+/*   Updated: 2026/03/31 14:12:39 by ele-moig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INIT_H
-# define INIT_H
+#include "cub3d.h"
 
-typedef struct s_game	t_game;
-typedef struct s_ray	t_ray;
-typedef struct s_imgb	t_imgb;
-void	init_game(t_game *game);
-void	init_map_cont(t_game *game);
-void	init_ray(t_game	*game);
-void	init_texture(t_game *game);
-void	init_all_textures(t_game *game);
+void	open_door(t_game *game)
+{
+	int	check_x;
+	int	check_y;
 
-#endif
+	check_x = (int)(game->pos->x + game->dir->x);
+	check_y = (int)(game->pos->y + game->dir->y);
+	if (game->map[check_y][check_x] == 'D')
+		game->map[check_y][check_x] = 'E';
+	else if (game->map[check_y][check_x] == 'E')
+		game->map[check_y][check_x] = 'D';
+}

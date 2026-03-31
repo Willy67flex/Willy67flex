@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_input_utils1.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: whollebe <whollebe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ele-moig <ele-moig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 15:13:06 by whollebe          #+#    #+#             */
-/*   Updated: 2026/03/24 15:13:59 by whollebe         ###   ########.fr       */
+/*   Updated: 2026/03/31 13:56:42 by ele-moig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int	get_rgb(int r, int g, int b)
 	return (r << 16 | g << 8 | b);
 }
 
-int check_texture_exists(char *path)
+int	check_texture_exists(char *path)
 {
-	int fd;
+	int	fd;
 
 	fd = open(path, O_RDONLY);
 	if (fd < 0)
@@ -58,6 +58,8 @@ int	is_valid_number_format(char *str)
 	i = 0;
 	if (str[i] == '\0')
 		return (1);
+	if (str[i] == ' ')
+		i++;
 	while (str[i])
 	{
 		if (str[i] < '0' || str[i] > '9')

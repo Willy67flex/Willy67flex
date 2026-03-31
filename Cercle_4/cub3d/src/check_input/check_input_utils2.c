@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_input_utils2.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: whollebe <whollebe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ele-moig <ele-moig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 15:14:16 by whollebe          #+#    #+#             */
-/*   Updated: 2026/03/30 13:22:19 by whollebe         ###   ########.fr       */
+/*   Updated: 2026/03/31 13:29:59 by ele-moig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,44 +14,30 @@
 
 void	set_player_setting(t_game *game, int dir, int x, int y)
 {
-	game->map[y][x] = '0';
-	game->player++;
-	game->p_dir = dir;
-	game->px = x;
-	game->py = y;
-	game->pos->x = x + 0.5;
-	game->pos->y = y + 0.5;
+	player_init(game, dir, x, y);
 	if (dir == 0)
 	{
-		game->dir->x = 0;
-		game->dir->y = -1;
-		game->plane->x = 0.85;
-		game->plane->y = 0;
+		set_vect_dir(game, 0.0, -1.0);
+		set_vect_plane(game, 0.85, 0.0);
 	}
 	if (dir == 1)
 	{
-		game->dir->x = 0;
-		game->dir->y = 1;
-		game->plane->x = -0.85;
-		game->plane->y = 0;
+		set_vect_dir(game, 0.0, 1.0);
+		set_vect_plane(game, -0.85, 0.0);
 	}
 	if (dir == 2)
 	{
-		game->dir->x = -1;
-		game->dir->y = 0;
-		game->plane->x = 0;
-		game->plane->y = -0.85;
+		set_vect_dir(game, -1.0, 0.0);
+		set_vect_plane(game, 0.0, -0.85);
 	}
 	if (dir == 3)
 	{
-		game->dir->x = 1;
-		game->dir->y = 0;
-		game->plane->x = 0;
-		game->plane->y = 0.85;
+		set_vect_dir(game, 1.0, 0.0);
+		set_vect_plane(game, 0.0, 0.85);
 	}
 }
 
-void	scan_arg_map(t_game *game, int i, int  j)
+void	scan_arg_map(t_game *game, int i, int j)
 {
 	if (game->map[i][j] != 'N' && game->map[i][j] != 'S'
 		&& game->map[i][j] != 'W' && game->map[i][j] != 'E'
@@ -83,9 +69,11 @@ int	atocolor(char **str, t_game *game, int flag)
 	if (x < 0 || x > 255)
 		return (1);
 	if (flag == 0)
-		game->texture->hex_floor = get_rgb(ft_atoi(str[0]), ft_atoi(str[1]), ft_atoi(str[2]));
+		game->texture->hex_floor = get_rgb(ft_atoi(str[0]),
+				ft_atoi(str[1]), ft_atoi(str[2]));
 	else
-		game->texture->hex_ceiling = get_rgb(ft_atoi(str[0]), ft_atoi(str[1]), ft_atoi(str[2]));
+		game->texture->hex_ceiling = get_rgb(ft_atoi(str[0]),
+				ft_atoi(str[1]), ft_atoi(str[2]));
 	return (0);
 }
 

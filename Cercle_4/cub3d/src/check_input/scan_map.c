@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   scan_map.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: whollebe <whollebe@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/31 14:04:39 by whollebe          #+#    #+#             */
+/*   Updated: 2026/03/31 14:06:05 by whollebe         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "cub3d.h"
 
@@ -17,9 +28,9 @@ int	check_description_color(char *color, t_game *game, int flag)
 		return (1);
 	if (char_table_len(char_color) != 3)
 		return (free_tab(char_color), 1);
-	if (is_valid_number_format(char_color[0]) ||
-		is_valid_number_format(char_color[1]) ||
-		is_valid_number_format(char_color[2]))
+	if (is_valid_number_format(char_color[0])
+		|| is_valid_number_format(char_color[1])
+		|| is_valid_number_format(char_color[2]))
 		return (free_tab(char_color), 1);
 	if (atocolor(char_color, game, flag))
 		return (free_tab(char_color), 1);
@@ -56,10 +67,10 @@ int	check_surrounded(t_game *game)
 		{
 			if (is_playable_space(game->map[y][x]))
 			{
-				if (get_val(game, y - 1, x) == ' ' ||
-					get_val(game, y + 1, x) == ' ' ||
-					get_val(game, y, x - 1) == ' ' ||
-					get_val(game, y, x + 1) == ' ')
+				if (get_val(game, y - 1, x) == ' '
+					|| get_val(game, y + 1, x) == ' '
+					|| get_val(game, y, x - 1) == ' '
+					|| get_val(game, y, x + 1) == ' ')
 					return (1);
 			}
 			x++;
@@ -71,10 +82,12 @@ int	check_surrounded(t_game *game)
 
 void	xpm_to_image(t_game *game, t_imgb *tex, char *path)
 {
-	tex->img = mlx_xpm_file_to_image(game->mlx, path, &tex->width, &tex->height);
+	tex->img = mlx_xpm_file_to_image(game->mlx, path, &tex->width,
+			&tex->height);
 	if (!tex->img)
 		free_all(game, "Impossible to load textures");
-	tex->addr = mlx_get_data_addr(tex->img, &tex->bbp, &tex->line_length, &tex->endian);
+	tex->addr = mlx_get_data_addr(tex->img, &tex->bbp, &tex->line_length,
+			&tex->endian);
 }
 
 void	scan_map(t_game *game)
@@ -102,5 +115,3 @@ void	scan_map(t_game *game)
 	if (game->player > 1)
 		free_all(game, "Multiple definition of the player");
 }
-
-

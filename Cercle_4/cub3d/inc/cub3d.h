@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cub3d.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ele-moig <ele-moig@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/31 14:15:10 by ele-moig          #+#    #+#             */
+/*   Updated: 2026/03/31 14:17:43 by ele-moig         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef CUB3D_H
 # define CUB3D_H
@@ -16,11 +27,7 @@
 # include <errno.h>
 # include <limits.h>
 # include <math.h>
-
-typedef struct s_game	t_game;
-typedef struct s_ray	t_ray;
-typedef	struct s_imgb	t_imgb;
-
+# include <sys/time.h>
 # include "../libft/inc/libft.h"
 # include "../minilibx-linux/mlx.h"
 # include "../minilibx-linux/mlx_int.h"
@@ -28,6 +35,15 @@ typedef	struct s_imgb	t_imgb;
 # include "init.h"
 # include "my_mlx.h"
 # include "algo.h"
+
+typedef struct s_game	t_game;
+typedef struct s_ray	t_ray;
+typedef struct s_imgb	t_imgb;
+
+# define MOVE_SPEED 5
+# define SPRINT_SPEED 10
+# define ROT_SPEED 3.5//Sensibilite clavier
+# define MOUSE_SENS 2// Sensibilite souris
 
 # define WIN_HEIGHT 1020
 # define WIN_WIDTH 1920
@@ -41,16 +57,12 @@ typedef	struct s_imgb	t_imgb;
 # define KEY_A 97
 # define KEY_S 115
 # define KEY_D 100
+# define KEY_E 101
 # define KEY_SHIFT 65505
 # define KEY_LEFT 65361
 # define KEY_RIGHT 65363
 
-typedef struct s_sprites
-{
-
-}	t_sprites;
-
-typedef	struct s_imgb
+typedef struct s_imgb
 {
 	void	*img;
 	char	*addr;
@@ -59,6 +71,9 @@ typedef	struct s_imgb
 	int		endian;
 	int		width;
 	int		height;
+	int		tex_pitch;
+	int		index;
+	int		screen_pitch;
 }	t_imgb;
 
 typedef struct s_texture
@@ -68,7 +83,6 @@ typedef struct s_texture
 	t_imgb	east;//2
 	t_imgb	west;//3
 	t_imgb	door;//ou door[x]
-
 	int		hex_floor;
 	int		hex_ceiling;
 }	t_texture;
@@ -79,6 +93,7 @@ typedef struct s_map_content
 	char	*s_txtr;
 	char	*w_txtr;
 	char	*e_txtr;
+	char	*door_txtr;
 
 	char	*floor_color;
 	char	*ceiling_color;
@@ -101,7 +116,7 @@ typedef struct s_ray
 	int		step_y;
 	int		hit;
 	int		side;
-	int		line_height;
+	int		line_h;
 	double	perp_wall_dist;
 	int		draw_start;
 	int		draw_end;
@@ -109,6 +124,7 @@ typedef struct s_ray
 	int		tex_y;
 	double	step;
 	double	text_pos;
+	int		hit_type;
 }	t_ray;
 
 typedef struct s_game
@@ -131,7 +147,6 @@ typedef struct s_game
 	int				py;
 	int				player;//check du nbr de joueur sur la map
 	int				p_dir;//check de sa direction de depart
-	t_sprites		*sprites;
 	t_map_content	*map_content;
 	t_texture		*texture;
 	t_vec2			*pos;
@@ -145,30 +160,24 @@ typedef struct s_game
 	int				key_right;
 	int				key_d;
 	int				key_shift;
+	long long		old_time;
+	double			dt;
 }	t_game;
 
-
-/*
-p_dir:
-
-0 = north
-1 = south
-2 = west
-3 = east
-*/
 //free_all
-void	free_all(t_game *game, char *msg);
-void	free_texture(t_game *game);
-void	free_map_content(t_game *game);
-void	free_tab(char **tab);
-
-int	render_frame(t_game *game);
-void	rotation_matrice(t_game *game, double angle);
-void move_player(t_game *game, double move_x, double move_y);
-void strafe_left(t_game *game);
-void move_forward(t_game *game);
-void	move_backward(t_game *game);
-void	strafe_right(t_game *game);
-void	draw_minimap(t_game *game);
+void		free_all(t_game *game, char *msg);
+void		free_texture(t_game *game);
+void		free_map_content(t_game *game);
+void		free_tab(char **tab);
+int			render_frame(t_game *game);
+void		rotation_matrice(t_game *game, double angle);
+void		move_player(t_game *game, double move_x, double move_y);
+void		strafe_left(t_game *game);
+void		move_forward(t_game *game);
+void		move_backward(t_game *game);
+void		strafe_right(t_game *game);
+void		draw_minimap(t_game *game);
+void		open_door(t_game *game);
+long long	get_time(void);
 
 #endif // CUB3D_H

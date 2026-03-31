@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_input_utils.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: whollebe <whollebe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ele-moig <ele-moig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/20 10:54:25 by whollebe          #+#    #+#             */
-/*   Updated: 2026/03/24 14:09:28 by whollebe         ###   ########.fr       */
+/*   Updated: 2026/03/31 13:28:44 by ele-moig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,15 @@ char	*extract_path(char *line, int skip)
 		j++;
 	}
 	return (path);
+}
+
+void	player_init(t_game *game, int dir, int x, int y)
+{
+	game->map[y][x] = '0';
+	game->player++;
+	game->p_dir = dir;
+	game->px = x;
+	game->py = y;
+	game->pos->x = x + 0.5;
+	game->pos->y = y + 0.5;
 }

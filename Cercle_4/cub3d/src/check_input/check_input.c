@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: whollebe <whollebe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ele-moig <ele-moig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/20 10:21:31 by whollebe          #+#    #+#             */
-/*   Updated: 2026/03/26 15:44:36 by whollebe         ###   ########.fr       */
+/*   Updated: 2026/03/31 13:29:12 by ele-moig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,16 @@ void	check_input(char *str, t_game *game, int argc)
 		msg_error("Usage-> \"./cub3D path/to/the/map.cub\"");
 	check_syntax(str);
 	check_file(game, str);
+}
+
+void	set_vect_dir(t_game *game, double x, double y)
+{
+	game->dir->x = x;
+	game->dir->y = y;
+}
+
+void	set_vect_plane(t_game *game, double x, double y)
+{
+	game->plane->x = x;
+	game->plane->y = y;
 }
