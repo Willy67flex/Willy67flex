@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   my_mlx_fct.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ele-moig <ele-moig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: whollebe <whollebe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:01:38 by ele-moig          #+#    #+#             */
-/*   Updated: 2026/03/31 15:07:20 by ele-moig         ###   ########.fr       */
+/*   Updated: 2026/04/08 13:05:04 by whollebe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,11 +80,6 @@ int	close_window(t_game *game)
 	if (game->img)
 		mlx_destroy_image(game->mlx, game->img);
 	free_all(game, NULL);
-	if (game->mlx)
-	{
-		mlx_destroy_display(game->mlx);
-		free(game->mlx);
-	}
 	exit(0);
 	return (0);
 }

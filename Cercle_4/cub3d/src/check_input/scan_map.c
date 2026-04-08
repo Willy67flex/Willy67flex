@@ -6,7 +6,7 @@
 /*   By: whollebe <whollebe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:04:39 by whollebe          #+#    #+#             */
-/*   Updated: 2026/03/31 14:06:05 by whollebe         ###   ########.fr       */
+/*   Updated: 2026/04/08 13:05:52 by whollebe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,8 @@ int	check_surrounded(t_game *game)
 
 void	xpm_to_image(t_game *game, t_imgb *tex, char *path)
 {
+	if (!path)
+		return ;
 	tex->img = mlx_xpm_file_to_image(game->mlx, path, &tex->width,
 			&tex->height);
 	if (!tex->img)

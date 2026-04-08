@@ -20,7 +20,7 @@ void	open_door(t_game *game)
 	check_x = (int)(game->pos->x + game->dir->x);
 	check_y = (int)(game->pos->y + game->dir->y);
 	if (game->map[check_y][check_x] == 'D')
-		game->map[check_y][check_x] = 'E';
-	else if (game->map[check_y][check_x] == 'E')
+		game->map[check_y][check_x] = 'O';
+	else if (game->map[check_y][check_x] == 'O')
 		game->map[check_y][check_x] = 'D';
 }

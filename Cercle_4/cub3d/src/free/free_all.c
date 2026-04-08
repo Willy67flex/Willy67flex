@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free_all.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ele-moig <ele-moig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: whollebe <whollebe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:07:41 by ele-moig          #+#    #+#             */
-/*   Updated: 2026/03/31 14:07:54 by ele-moig         ###   ########.fr       */
+/*   Updated: 2026/04/08 11:30:34 by whollebe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,11 @@ void	free_all(t_game *game, char *msg)
 		free(game->ray->side_dist);
 		free(game->ray->delta_dist);
 		free(game->ray);
+	}
+	if (game->mlx)
+	{
+		mlx_destroy_display(game->mlx);
+		free(game->mlx);
 	}
 	if (msg != NULL)
 		msg_error(msg);

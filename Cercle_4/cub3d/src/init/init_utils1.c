@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_utils1.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ele-moig <ele-moig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: whollebe <whollebe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:07:58 by ele-moig          #+#    #+#             */
-/*   Updated: 2026/03/31 14:56:27 by ele-moig         ###   ########.fr       */
+/*   Updated: 2026/04/08 11:23:39 by whollebe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,11 @@ void	init_ray(t_game	*game)
 
 void	init_texture(t_game *game)
 {
+	game->texture->north.img = NULL;
+	game->texture->south.img = NULL;
+	game->texture->west.img = NULL;
+	game->texture->east.img = NULL;
+	game->texture->door.img = NULL;
 	game->texture->hex_floor = 0;
 	game->texture->hex_ceiling = 0;
 }

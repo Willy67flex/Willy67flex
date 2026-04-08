@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_input.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ele-moig <ele-moig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: whollebe <whollebe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/20 10:29:03 by whollebe          #+#    #+#             */
-/*   Updated: 2026/03/31 14:25:06 by ele-moig         ###   ########.fr       */
+/*   Updated: 2026/04/08 13:22:37 by whollebe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ typedef struct s_ray	t_ray;
 typedef struct s_imgb	t_imgb;
 //check input
 void	check_input(char *str, t_game *game, int argc);
-void	check_syntax(char *str);
+void	check_syntax(char *str, t_game *game);
 void	check_file(t_game *game, char *str);
 void	set_vect_plane(t_game *game, double x, double y);
 void	set_vect_dir(t_game *game, double x, double y);
@@ -41,10 +41,14 @@ int		atocolor(char **str, t_game *game, int flag);
 char	get_val(t_game *game, int y, int x);
 int		is_playable_space(char c);
 //check file
-int		assign_param(t_game *game, char *line, char *id, char **param);
-int		map_description(char *line, t_game *game);
+int		map_description(char *line, t_game *game, int fd);
 int		check_map_description(t_game *game, char *str);
 void	fill_map(t_game *game, char *str, int start);
+//check file utils
+int		assign_param(char *line, char *id, char **param);
+int		check_param(char *line, t_game *game);
+void	skipping_lines(int start, int fd);
+void	handle_empty_map_line(t_game *game, char *line, int fd);
 //scan map
 void	scan_map(t_game *game);
 void	scan_description(t_game *game);

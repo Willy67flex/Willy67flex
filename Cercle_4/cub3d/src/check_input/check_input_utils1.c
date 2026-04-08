@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_input_utils1.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ele-moig <ele-moig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: whollebe <whollebe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 15:13:06 by whollebe          #+#    #+#             */
-/*   Updated: 2026/03/31 13:56:42 by ele-moig         ###   ########.fr       */
+/*   Updated: 2026/04/08 11:51:35 by whollebe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	check_texture_exists(char *path)
 {
 	int	fd;
 
+	if (!path)
+		return (1);
 	fd = open(path, O_RDONLY);
 	if (fd < 0)
 		return (1);
