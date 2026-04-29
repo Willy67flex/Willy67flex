@@ -3,12 +3,12 @@
 HumanB::HumanB(std::string name) : _name(name)
 {
 	_weapon = NULL;
-	std::cout << "HumanB constructor called" << std::endl;
+	std::cout << "HumanB constructor called\n" << std::endl;
 }
 
 HumanB::~HumanB()
 {
-	std::cout << "HumanB destructor called" << std::endl;
+	std::cout << "\nHumanB destructor called" << std::endl;
 }
 
 void	HumanB::setWeapon(Weapon& weapon)

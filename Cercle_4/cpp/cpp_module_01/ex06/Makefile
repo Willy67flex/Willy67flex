@@ -1,7 +1,7 @@
 SHELL       = /bin/bash
 
 # ====== CONFIG ======
-NAME        = unnecessaryViolence
+NAME        = harlFilter
 CXX         = c++
 CXXFLAGS    = -Wall -Wextra -Werror -std=c++98 -g
 RM          = rm -rf
@@ -49,7 +49,7 @@ $(NAME): $(OBJ)
 	@echo "    │                                        │"
 	@echo "    │         [ OK ] C++ Compilation         │"
 	@echo "    │                                        │"
-	@echo "    │     Executable: $(NAME)    │"
+	@echo "    │           Executable: $(NAME)       │"
 	@echo "    │                                        │"
 	@echo "    └────────────────────────────────────────┘"
 	@echo ""

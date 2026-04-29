@@ -1,7 +1,7 @@
 SHELL       = /bin/bash
 
 # ====== CONFIG ======
-NAME        = SedIsForLosers
+NAME        = sedIsForLosers
 CXX         = c++
 CXXFLAGS    = -Wall -Wextra -Werror -std=c++98 -g
 RM          = rm -rf
