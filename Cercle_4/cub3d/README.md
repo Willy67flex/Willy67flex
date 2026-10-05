@@ -1,98 +1,85 @@
-*This project has been created as part of the 42 curriculum by whollebe, ele-moig*
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-C-blue?style=for-the-badge&logo=c" alt="C"/>
+  <img src="https://img.shields.io/badge/Graphics-MiniLibX-informational?style=for-the-badge" alt="MiniLibX"/>
+  <img src="https://img.shields.io/badge/Project-cub3D-success?style=for-the-badge" alt="cub3D"/>
+</p>
 
-# cub3D - My first RayCaster with miniLibX
+[Home](../../README.md)
 
-## Description
+# 🕹️ cub3D — Raycasting avec MiniLibX
 
-**cub3D** is a 3D graphical representation of the inside of a maze from a first-person perspective, built in C. Inspired by the world-famous 1992 game *Wolfenstein 3D* (widely considered the first First-Person Shooter in gaming history), this project is a deep dive into the practical applications of mathematics and rendering. 
+> Création d'un moteur 3D à la première personne à partir d'une carte 2D, inspiré de *Wolfenstein 3D*.
 
-The core of this project relies on **Ray-Casting**, a rendering technique that creates a 3D perspective in a 2D map. By casting rays from the player's viewpoint and calculating their intersections with walls, the program scales vertical lines on the screen to simulate depth and distance. 
+## 🎯 Objectif
 
+**cub3D** utilise le raycasting pour calculer l'intersection entre les rayons du joueur et les murs de la carte. La distance obtenue sert à dessiner des bandes verticales dont la hauteur simule la profondeur et la perspective.
 
-## Features
+## ✨ Fonctionnalités
 
-### Mandatory Requirements
-* **Smooth Window Management**: Built using the `miniLibX` library, allowing fluid window handling (minimizing, switching, etc.).
-* **Directional Textures**: Different textures are applied to walls depending on the side they are facing (North, South, East, West).
-* **Dynamic Colors**: Floor and ceiling colors are customizable directly from the configuration file.
-* **Clean Exit**: The game handles cross-clicks and the `ESC` key to free all memory and exit cleanly.
+- Rendu 3D avec l'algorithme DDA et la MiniLibX.
+- Textures différentes pour les murs nord, sud, est et ouest.
+- Couleurs configurables pour le sol et le plafond.
+- Déplacements, collisions et rotation à la souris.
+- Mini-carte affichant le niveau et la position du joueur.
+- Portes interactives avec le caractère `D`.
+- Fermeture propre avec `ESC` ou la croix de la fenêtre.
 
-### Bonus Implementations
+## 🚀 Compilation et exécution
 
-* **Interactive Doors (`D`)**: A custom map identifier allowing the placement of doors. They can be opened and closed by the player. We implemented specific checks to ensure doors do not open into the void.
-* **Mouse Look**: The player can smoothly rotate their point of view using the mouse, greatly enhancing the modern FPS feel.
-* **Collision**: The players cannot go through walls.
-* **Mini-map**: a minimap showing the level and the player position.
-
----
-
-## Instructions
-
-### Prerequisites
-* A C compiler (`cc`).
-* The `miniLibX` library installed or compiled from source.
-* The standard C math library.
-
-### Compilation
-We provide a `Makefile` that compiles the project adhering to the strict 42 Norm.
-* To compile the standard project:
-  ```bash
-  make
-  ```
-* Additional rules: `clean` (removes object files), `fclean` (removes objects and executable), `re` (recompiles from scratch).
-
-### Execution
-Run the game by passing a valid `.cub` scene description file as an argument:
 ```bash
+make
 ./cub3D maps/example.cub
 ```
 
----
+Règles disponibles : `make clean`, `make fclean` et `make re`.
 
-## Controls
+## 🎮 Contrôles
 
-* **W**: Move forward
-* **S**: Move backward
-* **A**: Strafe left
-* **D**: Strafe right
-* **Mouse Movement**: Rotate camera view
-* **E**: Interact / Open and close doors
-* **ESC**: Quit the game
+| Touche | Action |
+|--------|--------|
+| `W` / `S` | Avancer / reculer |
+| `A` / `D` | Se déplacer latéralement |
+| Souris | Tourner la caméra |
+| `E` | Ouvrir ou fermer une porte |
+| `SHIFT` | Accélérer le déplacement |
+| `ESC` | Quitter |
 
----
+## 🗺️ Format d'une carte `.cub`
 
-## Map and Configuration Rules
+Les textures et couleurs doivent être déclarées avant la carte :
 
-The `.cub` file defines the rules of the environment. The parser strictly checks for the following elements, which can be provided in any order (except the map, which must be last).
+```text
+NO ./texture/north.xpm
+SO ./texture/south.xpm
+WE ./texture/west.xpm
+EA ./texture/east.xpm
+F 80,80,80
+C 120,180,220
+```
 
-### Identifiers
-Each identifier must be followed by its specific information, separated by spaces:
-* `NO ./path_to_texture`: North wall texture.
-* `SO ./path_to_texture`: South wall texture.
-* `WE ./path_to_texture`: West wall texture.
-* `EA ./path_to_texture`: East wall texture.
-* `F R,G,B`: Floor color in RGB format (0-255).
-* `C R,G,B`: Ceiling color in RGB format (0-255).
+| Symbole | Signification |
+|---------|---------------|
+| `0` | Espace libre |
+| `1` | Mur |
+| `N`, `S`, `E`, `W` | Position et orientation initiales |
+| `D` | Porte interactive |
 
-### Map Layout
-The map itself must be constructed using the following characters:
-* `0`: Empty space.
-* `1`: Solid wall.
-* `N, S, E, W`: Player spawn point and initial facing direction.
-* `D`: Interactive Door (Must be flanked by walls and cannot face the void).
+La carte doit être fermée par des murs et contenir une seule position de départ valide.
 
-*Note: The map must be completely closed/surrounded by walls, otherwise the parser will return an error*.
+## 🔑 Compétences développées
 
----
+- Raycasting, vecteurs et trigonométrie
+- Algorithme DDA et calcul de distances
+- Gestion d'une fenêtre et d'images avec MiniLibX
+- Parsing et validation d'une configuration
+- Gestion des événements clavier et souris
+- Collisions, textures et libération complète des ressources
 
-## Resources & AI Usage
+## 📚 Ressources
 
-### References
-* [Lode's Computer Graphics Tutorial (Raycasting)](https://lodev.org/cgtutor/raycasting.html) - The primary mathematical and conceptual resource used to understand Digital Differential Analysis (DDA) and ray calculations.
-* MiniLibX Documentation - For managing the graphical window and hooking keyboard/mouse events.
+- [Lode's Computer Graphics Tutorial — Raycasting](https://lodev.org/cgtutor/raycasting.html)
+- Documentation MiniLibX
 
-### AI usage
-In accordance with the school's AI guidelines, artificial intelligence was used strictly as an educational assistant:
-* **Concept Clarification**: AI was queried to help demystify the complex trigonometry and vector math required for camera plane rotation and ray collision.
-* **Mathematical help**: AI was also used to help us with the math side of this project, because it was hard for me (ele-moig) to use matrices and vectors.
-* **Readme**: AI was used to help create this readme because this is exactly the kind of shit i want the ai to do for me (this was written by ele-moig)
+[Home](../../README.md)
+
+<p align="center"><i>Projet réalisé dans le cadre du cursus 42 — Cercle 4</i></p>
