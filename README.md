@@ -14,11 +14,20 @@ Bienvenue sur mon dépôt de suivi du cursus 42. Ici, je regroupe mes projets r�
 ![Shell](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Nginx](https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=nginx&logoColor=white)
+![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
+![WordPress](https://img.shields.io/badge/WordPress-21759B?style=for-the-badge&logo=wordpress&logoColor=white)
 
-* **Système :** Gestion de la mémoire (`malloc`/`free`), Threads & Mutex, Signaux UNIX, Processus (`fork`, `pipe`), File Descriptors.
-* **C++ :** Programmation orientée objet, héritage, polymorphisme, exceptions, templates et STL.
-* **Outils :** Makefile, Valgrind, GDB, Vim, VS Code.
-* **Algorithmique :** Tris optimisés, listes chaînées, arbres, parsing et gestion de la complexité.
+* **Programmation C :** Gestion manuelle de la mémoire (`malloc`/`free`), pointeurs, listes chaînées, file descriptors, parsing et création de bibliothèques.
+* **C++ :** C++98, programmation orientée objet, forme canonique orthodoxe, héritage, polymorphisme, classes abstraites, exceptions, templates et STL.
+* **Système Unix :** Processus (`fork`, `exec`, `pipe`), signaux UNIX, variables d'environnement, redirections, permissions et administration Linux.
+* **Concurrence :** Threads POSIX, mutex, synchronisation, gestion des ressources partagées et prévention des deadlocks.
+* **Réseaux :** Sockets TCP, communication inter-processus, multiplexage avec `poll()`, protocoles HTTP/1.0, parsing de requêtes, CGI et gestion des connexions simultanées.
+* **Administration système :** Machines virtuelles, Debian, LVM, chiffrement, SSH, `sudo`, UFW, politiques de mots de passe et scripts de monitoring.
+* **Conteneurisation et services :** Docker, Docker Compose, réseaux bridge, volumes persistants, Docker secrets, NGINX, MariaDB, WordPress et PHP-FPM.
+* **Graphisme et algorithmique :** MiniLibX, raycasting, algorithme DDA, collisions, tris optimisés, piles, arbres et analyse de complexité.
+* **Outils :** Makefile, Git, Valgrind, GDB, Vim et VS Code.
 
 ---
 
