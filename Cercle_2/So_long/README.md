@@ -7,13 +7,13 @@
 
 [Home](../../README.md)
 
-# 🎮 So_long — Jeu 2D en C
+# So_long — Jeu 2D en C
 
 > Un jeu 2D top-down en C avec la MiniLibX : exploration d'une carte, collecte d'objets, ennemis et animations sprite.
 
 ---
 
-## 🎯 Objectif
+## Objectif
 
 **So_long** est un jeu 2D en vue de dessus développé en C avec la bibliothèque graphique **MiniLibX**. Le joueur explore une carte tile-based, collecte des pièces et atteint la sortie tout en évitant les ennemis.
 
@@ -21,7 +21,7 @@ Ce projet introduit la **programmation graphique**, la **gestion d'événements*
 
 ---
 
-## 🕹️ Gameplay
+## Gameplay
 
 ### Contrôles
 
@@ -50,7 +50,7 @@ Ce projet introduit la **programmation graphique**, la **gestion d'événements*
 
 ---
 
-## 🗺️ Système de Cartes
+## Système de Cartes
 
 Les cartes sont des fichiers `.ber` au format texte :
 
@@ -85,7 +85,7 @@ Le programme effectue une **validation exhaustive** avant de lancer le jeu :
 
 ---
 
-## 🎨 Rendu Graphique
+## Rendu Graphique
 
 ### Tiles & Sprites (32×32 pixels)
 
@@ -110,7 +110,7 @@ Le HUD affiche en temps réel :
 
 ---
 
-## 👾 Intelligence Artificielle des Ennemis
+## Intelligence Artificielle des Ennemis
 
 Les ennemis **traquent activement** le joueur avec un algorithme de poursuite basé sur la distance :
 
@@ -127,7 +127,7 @@ Les ennemis ne peuvent pas traverser les murs, la sortie, les pièces, ni d'autr
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 so_long (main)
@@ -160,7 +160,7 @@ so_long (main)
 
 ---
 
-## 🛠️ Compilation & Utilisation
+## Compilation & Utilisation
 
 ```bash
 # Compiler le jeu
@@ -182,7 +182,7 @@ make re       # Recompilation
 
 ---
 
-## 📂 Structure du Projet
+## Structure du Projet
 
 ```
 So_long/
@@ -203,7 +203,7 @@ So_long/
 
 ---
 
-## 🔑 Compétences Développées
+## Compétences Développées
 
 - **Programmation graphique** : fenêtrage, rendu par tiles, gestion d'événements clavier
 - **Game loop** : boucle de jeu avec animation frame-by-frame

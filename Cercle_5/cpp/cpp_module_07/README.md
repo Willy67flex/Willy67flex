@@ -5,15 +5,15 @@
 
 [Home](../../../README.md)
 
-# 🧩 C++ Module 07 — Templates
+# C++ Module 07 — Templates
 
 > Création de fonctions et de classes génériques réutilisables.
 
-## 🎯 Objectif
+## Objectif
 
 Ce module introduit les templates de fonctions, l'itération générique sur des tableaux et la classe `Array`, avec une gestion des bornes et des erreurs d'accès.
 
-## 📚 Exercices
+## Exercices
 
 | Exercice | Projet | Notions principales |
 |----------|--------|---------------------|
@@ -21,7 +21,7 @@ Ce module introduit les templates de fonctions, l'itération générique sur des
 | `ex01` | [Iter](ex01) | Fonction template appliquée à un tableau |
 | `ex02` | [Array](ex02) | Classe template, taille fixe et exceptions |
 
-## 🚀 Utilisation
+## Utilisation
 
 ```bash
 cd ex02
@@ -29,7 +29,7 @@ make
 ./array
 ```
 
-## 🔑 Compétences développées
+## Compétences développées
 
 - Templates de fonctions et de classes
 - Programmation générique

@@ -6,13 +6,13 @@
 
 [Home](../../README.md)
 
-# 📖 Get Next Line — Lecture Ligne par Ligne
+# Get Next Line — Lecture Ligne par Ligne
 
 > Une fonction qui lit et retourne une ligne depuis un file descriptor, un appel à la fois.
 
 ---
 
-## 🎯 Objectif
+## Objectif
 
 **Get Next Line** implémente une fonction capable de lire le contenu d'un fichier (ou de `stdin`) **ligne par ligne**, en retournant une nouvelle ligne à chaque appel successif. Ce projet enseigne la gestion de **variables statiques**, la lecture par **buffer**, et la manipulation fine de la mémoire en C.
 
@@ -24,7 +24,7 @@ Chaque appel retourne la ligne suivante du fichier (incluant le `\n`), ou `NULL`
 
 ---
 
-## ⚙️ Fonctionnement
+## Fonctionnement
 
 ### Principe de la lecture par buffer
 
@@ -69,7 +69,7 @@ get_next_line(fd)
 
 ---
 
-## 🌟 Partie Bonus — File Descriptors Multiples
+## Partie Bonus — File Descriptors Multiples
 
 La version bonus permet de lire **simultanément** depuis plusieurs fichiers sans perte de données :
 
@@ -97,7 +97,7 @@ Chaque file descriptor possède son propre buffer indépendant, garantissant l'i
 
 ---
 
-## 🛡️ Gestion de la Mémoire
+## Gestion de la Mémoire
 
 | Protection | Détail |
 |------------|--------|
@@ -109,7 +109,7 @@ Chaque file descriptor possède son propre buffer indépendant, garantissant l'i
 
 ---
 
-## 🛠️ Compilation & Utilisation
+## Compilation & Utilisation
 
 Le `BUFFER_SIZE` est configurable à la compilation :
 
@@ -148,7 +148,7 @@ int main(void)
 
 ---
 
-## 📂 Structure du Projet
+## Structure du Projet
 
 ```
 get_next_line/
@@ -173,7 +173,7 @@ get_next_line/
 
 ---
 
-## 🔑 Compétences Développées
+## Compétences Développées
 
 - **Variables statiques** : persistance de données entre les appels de fonction
 - **Lecture buffererisée** : optimisation des appels système `read()`

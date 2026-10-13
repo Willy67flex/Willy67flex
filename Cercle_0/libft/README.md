@@ -6,13 +6,13 @@
 
 [Home](../../README.md)
 
-# 📚 Libft — Ma Première Bibliothèque C
+# Libft — Ma Première Bibliothèque C
 
 > Réimplémentation d'une partie de la bibliothèque standard C, enrichie de fonctions utilitaires pour tous les projets 42.
 
 ---
 
-## 🎯 Objectif
+## Objectif
 
 **Libft** est le tout premier projet du cursus 42. L'objectif est de recoder depuis zéro un ensemble de fonctions de la libc (`string.h`, `stdlib.h`, `ctype.h`...), puis d'y ajouter des fonctions supplémentaires absentes de la bibliothèque standard. Cette bibliothèque est ensuite réutilisée dans **tous les projets suivants**.
 
@@ -20,7 +20,7 @@ Ce projet m'a permis de comprendre en profondeur le fonctionnement interne des f
 
 ---
 
-## 🧩 Fonctions Implémentées
+## Fonctions Implémentées
 
 ### Fonctions libc (Partie 1)
 
@@ -71,7 +71,7 @@ typedef struct s_list
 
 ---
 
-## 🛠️ Compilation & Utilisation
+## Compilation & Utilisation
 
 ```bash
 # Compiler la bibliothèque (partie obligatoire)
@@ -110,7 +110,7 @@ cc main.c -L. -lft -o programme
 
 ---
 
-## 📂 Structure du Projet
+## Structure du Projet
 
 ```
 libft/
@@ -133,7 +133,7 @@ libft/
 
 ---
 
-## 🔑 Compétences Développées
+## Compétences Développées
 
 - **Programmation C bas niveau** : pointeurs, arithmétique de pointeurs, casts
 - **Gestion mémoire** : `malloc`, `free`, détection de fuites, protection contre les overflows

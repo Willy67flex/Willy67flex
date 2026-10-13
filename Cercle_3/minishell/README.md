@@ -7,7 +7,7 @@
 
 [Home](../../README.md)
 
-# 🐚 Minishell — Notre Propre Shell Unix
+# Minishell — Notre Propre Shell Unix
 
 > Réimplémentation d'un shell bash-like en C, avec gestion des pipes, redirections, variables d'environnement, et builtins.
 
@@ -15,7 +15,7 @@
 
 ---
 
-## 🎯 Objectif
+## Objectif
 
 **Minishell** est le projet le plus ambitieux du tronc commun 42. L'objectif est de recréer un **shell interactif** capable d'exécuter des commandes, de gérer les **pipes** (`|`), les **redirections** (`<`, `>`, `>>`, `<<`), les **variables d'environnement** (`$VAR`), et les **signaux** (`Ctrl-C`, `Ctrl-D`, `Ctrl-\`).
 
@@ -23,7 +23,7 @@ Ce projet combine la maîtrise de la gestion de processus, des file descriptors,
 
 ---
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
 ### Commandes Builtins
 
@@ -90,7 +90,7 @@ unset MY_VAR            # Suppression
 
 ---
 
-## 🏗️ Architecture — Pipeline de Traitement
+## Architecture — Pipeline de Traitement
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -146,7 +146,7 @@ unset MY_VAR            # Suppression
 
 ---
 
-## 🛠️ Compilation & Utilisation
+## Compilation & Utilisation
 
 ```bash
 make
@@ -175,7 +175,7 @@ minishell$ exit 42
 
 ---
 
-## 📂 Structure du Projet
+## Structure du Projet
 
 ```
 minishell/
@@ -236,7 +236,7 @@ minishell/
 
 ---
 
-## 🔑 Compétences Développées
+## Compétences Développées
 
 - **Programmation système UNIX** : `fork()`, `execve()`, `pipe()`, `dup2()`, `wait()`
 - **Lexer / Parser** : tokenisation et construction d'arbre de commandes

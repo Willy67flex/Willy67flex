@@ -5,15 +5,15 @@
 
 [Home](../../../README.md)
 
-# 📊 C++ Module 09 — STL et algorithmes
+# C++ Module 09 — STL et algorithmes
 
 > Résolution de problèmes pratiques avec les conteneurs STL, les piles et les algorithmes de tri.
 
-## 🎯 Objectif
+## Objectif
 
 Le module met en œuvre trois programmes complets : lecture d'un historique de Bitcoin, évaluation d'expressions en notation polonaise inversée et comparaison de tris hybrides sur plusieurs conteneurs.
 
-## 📚 Exercices
+## Exercices
 
 | Exercice | Projet | Notions principales |
 |----------|--------|---------------------|
@@ -21,7 +21,7 @@ Le module met en œuvre trois programmes complets : lecture d'un historique de B
 | `ex01` | [RPN](ex01) | Évaluation d'expressions avec une pile |
 | `ex02` | [PmergeMe](ex02) | Tri Ford-Johnson et comparaison de performances |
 
-## 🚀 Utilisation
+## Utilisation
 
 ```bash
 cd ex00
@@ -31,7 +31,7 @@ make
 
 Chaque exercice possède son propre `Makefile` et ses propres fichiers d'entrée lorsque nécessaire.
 
-## 🔑 Compétences développées
+## Compétences développées
 
 - Parsing et validation de données
 - `std::map`, `std::stack`, `std::vector` et `std::deque`

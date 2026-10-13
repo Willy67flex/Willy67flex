@@ -5,15 +5,15 @@
 
 [Home](../../../README.md)
 
-# 🏛️ C++ Module 05 — Exceptions et bureaucratie
+# C++ Module 05 — Exceptions et bureaucratie
 
 > Modélisation d'une administration avec validation des grades et traitement des erreurs par exceptions.
 
-## 🎯 Objectif
+## Objectif
 
 Le module construit progressivement `Bureaucrat`, `Form`, des formulaires spécialisés et un `Intern`. Les grades invalides, les signatures et les exécutions impossibles sont signalés par des exceptions dédiées.
 
-## 📚 Exercices
+## Exercices
 
 | Exercice | Projet | Notions principales |
 |----------|--------|---------------------|
@@ -22,7 +22,7 @@ Le module construit progressivement `Bureaucrat`, `Form`, des formulaires spéci
 | `ex02` | [AForm](ex02) | Formulaires abstraits et exécution spécialisée |
 | `ex03` | [Intern](ex03) | Création dynamique de formulaires par nom |
 
-## 🚀 Utilisation
+## Utilisation
 
 ```bash
 cd ex03
@@ -30,7 +30,7 @@ make
 ./bureaucrat
 ```
 
-## 🔑 Compétences développées
+## Compétences développées
 
 - Exceptions imbriquées et `try`/`catch`
 - Classes abstraites et méthodes virtuelles

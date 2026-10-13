@@ -6,13 +6,13 @@
 
 [Home](../../README.md)
 
-# 🔄 Push_Swap — Tri de Piles avec Opérations Limitées
+# Push_Swap — Tri de Piles avec Opérations Limitées
 
 > Trier une pile d'entiers avec le minimum d'opérations possible, en utilisant uniquement deux piles et un jeu restreint de commandes.
 
 ---
 
-## 🎯 Objectif
+## Objectif
 
 **Push_Swap** est un projet d'algorithmique pur. Le défi : trier une séquence d'entiers en utilisant **deux piles** (A et B) et un ensemble de **11 opérations** prédéfinies, tout en minimisant le nombre total d'instructions générées.
 
@@ -20,7 +20,7 @@ Ce projet enseigne la **complexité algorithmique**, l'**optimisation**, et la c
 
 ---
 
-## 📐 Opérations Disponibles
+## Opérations Disponibles
 
 | Opération | Description |
 |:---------:|-------------|
@@ -38,7 +38,7 @@ Ce projet enseigne la **complexité algorithmique**, l'**optimisation**, et la c
 
 ---
 
-## 🧠 Algorithme — Stratégie Adaptative
+## Algorithme — Stratégie Adaptative
 
 ### Petites entrées (≤ 5 éléments) — Résolution directe
 
@@ -95,7 +95,7 @@ Coût total = max(|A|, |B|) si même direction
 
 ---
 
-## 📊 Performance
+## Performance
 
 | Taille d'entrée | Opérations générées | Benchmark 42 |
 |:---:|:---:|:---:|
@@ -106,7 +106,7 @@ Coût total = max(|A|, |B|) si même direction
 
 ---
 
-## 🚀 Utilisation
+## Utilisation
 
 ```bash
 make
@@ -127,7 +127,7 @@ ARG=$(shuf -i 1-500 -n 100 | tr '\n' ' '); ./push_swap $ARG | wc -l
 
 ---
 
-## ✅ Bonus — Checker
+## Bonus — Checker
 
 Le programme **checker** lit les instructions sur `stdin` et vérifie si elles trient correctement la pile :
 
@@ -142,7 +142,7 @@ Le checker simule l'exécution de chaque opération en mode silencieux, puis vé
 
 ---
 
-## 📂 Structure du Projet
+## Structure du Projet
 
 ```
 Push_Swap/
@@ -173,7 +173,7 @@ Push_Swap/
 
 ---
 
-## 🔑 Compétences Développées
+## Compétences Développées
 
 - **Algorithmique** : complexité temporelle, optimisation combinatoire
 - **Structures de données** : manipulation de piles (stack) avec opérations contraintes

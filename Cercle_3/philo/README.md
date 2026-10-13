@@ -7,13 +7,13 @@
 
 [Home](../../README.md)
 
-# 🍝 Philosophers — Le Problème du Dîner des Philosophes
+# Philosophers — Le Problème du Dîner des Philosophes
 
 > Implémentation multi-threadée du classique problème de synchronisation en informatique, avec gestion des mutex et prévention des deadlocks.
 
 ---
 
-## 🎯 Objectif
+## Objectif
 
 **Philosophers** résout le célèbre problème du **Dîner des Philosophes** de Dijkstra. N philosophes sont assis autour d'une table ronde, chacun alternant entre **manger**, **dormir** et **penser**. Pour manger, un philosophe doit saisir les deux fourchettes adjacentes (partagées avec ses voisins).
 
@@ -21,18 +21,18 @@ Le défi : éviter les **deadlocks** (interblocages) et les **data races** (acc�
 
 ---
 
-## 🧩 Le Problème
+## Le Problème
 
 ```
-         🍝 Philosophe 1
-        /              \
-   🍴 Fork 1        🍴 Fork 2
-      |                  |
-🍝 Philo 4          🍝 Philo 2
-      |                  |
-   🍴 Fork 4        🍴 Fork 3
-        \              /
-         🍝 Philo 3
+            Philo 1
+        /            \
+    Fork 1         Fork 2
+      |               |
+ Philo 4           Philo 2
+      |               |
+    Fork 4         Fork 3
+        \            /
+            Philo 3
 
 ```
 
@@ -45,13 +45,13 @@ Le défi : éviter les **deadlocks** (interblocages) et les **data races** (acc�
 
 ---
 
-## ⚙️ Architecture Multi-Threadée
+## Architecture Multi-Threadée
 
 ### Un thread par philosophe + un moniteur
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│                      THREAD PRINCIPAL                         │
+│                      THREAD PRINCIPAL                        │
 │                                                              │
 │  Initialisation → Création threads → Monitoring → Cleanup    │
 └──────┬────────────────────┬──────────────────────┬───────────┘
@@ -83,19 +83,19 @@ Le défi : éviter les **deadlocks** (interblocages) et les **data races** (acc�
 ### Cycle de vie d'un philosophe
 
 ```
-1. 🤔 PENSER   → attente (pas de ressources)
-2. 🍴 PRENDRE  → verrouiller fork gauche (mutex lock)
-3. 🍴 PRENDRE  → verrouiller fork droite (mutex lock)
-4. 🍝 MANGER   → mise à jour de last_meal_time (protégé par meal_lock)
+1. PENSER   → attente (pas de ressources)
+2. PRENDRE  → verrouiller fork gauche (mutex lock)
+3. PRENDRE  → verrouiller fork droite (mutex lock)
+4. MANGER   → mise à jour de last_meal_time (protégé par meal_lock)
                 → dormir pendant time_to_eat ms
-5. 🍴 RELÂCHER → déverrouiller les deux fourchettes
-6. 😴 DORMIR   → dormir pendant time_to_sleep ms
+5. RELÂCHER → déverrouiller les deux fourchettes
+6. DORMIR   → dormir pendant time_to_sleep ms
 7. → Retour à l'étape 1
 ```
 
 ---
 
-## 🔒 Stratégie de Synchronisation
+## Stratégie de Synchronisation
 
 ### 4 types de mutex
 
@@ -140,7 +140,7 @@ Une fonction `ft_usleep()` personnalisée assure une précision sub-milliseconde
 
 ---
 
-## 🚀 Utilisation
+## Utilisation
 
 ```bash
 make
@@ -186,7 +186,7 @@ timestamp_ms  philo_id  action
 
 ---
 
-## 📂 Structure du Projet
+## Structure du Projet
 
 ```
 philo/
@@ -206,7 +206,7 @@ philo/
 
 ---
 
-## 🛡️ Garanties
+## Garanties
 
 | Aspect | Vérification |
 |--------|-------------|
@@ -217,7 +217,7 @@ philo/
 
 ---
 
-## 🔑 Compétences Développées
+## Compétences Développées
 
 - **Programmation multi-threadée** : `pthread_create`, `pthread_join`, routines de thread
 - **Synchronisation** : `pthread_mutex_lock/unlock`, sections critiques, exclusion mutuelle

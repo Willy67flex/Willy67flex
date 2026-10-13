@@ -5,15 +5,15 @@
 
 [Home](../../../README.md)
 
-# 📐 C++ Module 02 — Classes canoniques et nombres à virgule fixe
+# C++ Module 02 — Classes canoniques et nombres à virgule fixe
 
 > Implémentation d'une classe numérique complète avec surcharge des opérateurs.
 
-## 🎯 Objectif
+## Objectif
 
 Ce module introduit la forme canonique orthodoxe, les nombres à virgule fixe et la surcharge d'opérateurs. Le dernier exercice applique ces notions à la géométrie pour déterminer si un point se trouve dans un triangle.
 
-## 📚 Exercices
+## Exercices
 
 | Exercice | Projet | Notions principales |
 |----------|--------|---------------------|
@@ -22,7 +22,7 @@ Ce module introduit la forme canonique orthodoxe, les nombres à virgule fixe et
 | `ex02` | [Fixed operators](ex02) | Comparaisons, opérations arithmétiques et min/max |
 | `ex03` | [Point in triangle](ex03) | Classe `Point`, produit vectoriel et algorithme BSP |
 
-## 🚀 Utilisation
+## Utilisation
 
 ```bash
 cd ex03
@@ -32,7 +32,7 @@ make
 
 Chaque exercice possède son propre `Makefile`.
 
-## 🔑 Compétences développées
+## Compétences développées
 
 - Forme canonique orthodoxe
 - Surcharge d'opérateurs

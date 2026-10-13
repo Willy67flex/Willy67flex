@@ -5,15 +5,15 @@
 
 [Home](../../../README.md)
 
-# 🧰 C++ Module 08 — STL et conteneurs
+# C++ Module 08 — STL et conteneurs
 
 > Utilisation des conteneurs et des algorithmes de la bibliothèque standard C++.
 
-## 🎯 Objectif
+## Objectif
 
 Les exercices appliquent des algorithmes génériques à des conteneurs existants, construisent un conteneur spécialisé appelé `Span` et adaptent une pile pour la rendre itérable.
 
-## 📚 Exercices
+## Exercices
 
 | Exercice | Projet | Notions principales |
 |----------|--------|---------------------|
@@ -21,7 +21,7 @@ Les exercices appliquent des algorithmes génériques à des conteneurs existant
 | `ex01` | [Span](ex01) | Stockage de nombres et distances minimale/maximale |
 | `ex02` | [MutantStack](ex02) | Héritage d'un adaptateur et itérateurs |
 
-## 🚀 Utilisation
+## Utilisation
 
 ```bash
 cd ex01

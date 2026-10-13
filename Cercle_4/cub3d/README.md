@@ -6,15 +6,15 @@
 
 [Home](../../README.md)
 
-# 🕹️ cub3D — Raycasting avec MiniLibX
+# cub3D — Raycasting avec MiniLibX
 
 > Création d'un moteur 3D à la première personne à partir d'une carte 2D, inspiré de *Wolfenstein 3D*.
 
-## 🎯 Objectif
+## Objectif
 
 **cub3D** utilise le raycasting pour calculer l'intersection entre les rayons du joueur et les murs de la carte. La distance obtenue sert à dessiner des bandes verticales dont la hauteur simule la profondeur et la perspective.
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
 - Rendu 3D avec l'algorithme DDA et la MiniLibX.
 - Textures différentes pour les murs nord, sud, est et ouest.
@@ -24,7 +24,7 @@
 - Portes interactives avec le caractère `D`.
 - Fermeture propre avec `ESC` ou la croix de la fenêtre.
 
-## 🚀 Compilation et exécution
+## Compilation et exécution
 
 ```bash
 make
@@ -33,7 +33,7 @@ make
 
 Règles disponibles : `make clean`, `make fclean` et `make re`.
 
-## 🎮 Contrôles
+## Contrôles
 
 | Touche | Action |
 |--------|--------|
@@ -44,7 +44,7 @@ Règles disponibles : `make clean`, `make fclean` et `make re`.
 | `SHIFT` | Accélérer le déplacement |
 | `ESC` | Quitter |
 
-## 🗺️ Format d'une carte `.cub`
+## Format d'une carte `.cub`
 
 Les textures et couleurs doivent être déclarées avant la carte :
 
@@ -66,7 +66,7 @@ C 120,180,220
 
 La carte doit être fermée par des murs et contenir une seule position de départ valide.
 
-## 🔑 Compétences développées
+## Compétences développées
 
 - Raycasting, vecteurs et trigonométrie
 - Algorithme DDA et calcul de distances
@@ -75,7 +75,7 @@ La carte doit être fermée par des murs et contenir une seule position de dépa
 - Gestion des événements clavier et souris
 - Collisions, textures et libération complète des ressources
 
-## 📚 Ressources
+## Ressources
 
 - [Lode's Computer Graphics Tutorial — Raycasting](https://lodev.org/cgtutor/raycasting.html)
 - Documentation MiniLibX

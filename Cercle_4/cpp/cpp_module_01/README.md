@@ -5,15 +5,15 @@
 
 [Home](../../../README.md)
 
-# 🧟 C++ Module 01 — Mémoire, références et pointeurs
+# C++ Module 01 — Mémoire, références et pointeurs
 
 > Approfondissement de la gestion mémoire et des mécanismes de référence en C++98.
 
-## 🎯 Objectif
+## Objectif
 
 Les exercices mettent en pratique `new` et `delete`, les pointeurs, les références, les pointeurs de fonctions et la durée de vie des objets, au travers de zombies et de personnages réagissant à différents niveaux de menace.
 
-## 📚 Exercices
+## Exercices
 
 | Exercice | Projet | Notions principales |
 |----------|--------|---------------------|
@@ -25,7 +25,7 @@ Les exercices mettent en pratique `new` et `delete`, les pointeurs, les référe
 | `ex05` | [Harl 2.0](ex05) | Pointeurs vers fonctions membres |
 | `ex06` | [Harl Filter](ex06) | Filtrage de niveaux de messages |
 
-## 🚀 Utilisation
+## Utilisation
 
 ```bash
 cd ex06
@@ -35,7 +35,7 @@ make
 
 Chaque exercice se compile indépendamment avec son `Makefile`.
 
-## 🔑 Compétences développées
+## Compétences développées
 
 - Gestion explicite de la mémoire
 - Différences entre pointeur et référence

@@ -5,15 +5,15 @@
 
 [Home](../../../README.md)
 
-# 🧱 C++ Module 00 — Bases de l'orienté objet
+# C++ Module 00 — Bases de l'orienté objet
 
 > Découverte de la syntaxe C++98 et des premiers concepts de la programmation orientée objet.
 
-## 🎯 Objectif
+## Objectif
 
 Ce module introduit les classes, les attributs, les méthodes, les constructeurs, l'encapsulation et les flux d'entrée/sortie. Les exercices construisent progressivement de petits programmes autonomes en C++.
 
-## 📚 Exercices
+## Exercices
 
 | Exercice | Projet | Notions principales |
 |----------|--------|---------------------|
@@ -21,7 +21,7 @@ Ce module introduit les classes, les attributs, les méthodes, les constructeurs
 | `ex01` | [PhoneBook](ex01) | Classes `Contact` et `PhoneBook`, saisie utilisateur, affichage formaté |
 | `ex02` | [Account](ex02) | Classes, état interne et fonctions membres |
 
-## 🚀 Utilisation
+## Utilisation
 
 ```bash
 cd ex01

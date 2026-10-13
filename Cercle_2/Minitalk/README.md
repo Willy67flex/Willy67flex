@@ -6,13 +6,13 @@
 
 [Home](../../README.md)
 
-# 📡 Minitalk — Communication Inter-Processus par Signaux
+# Minitalk — Communication Inter-Processus par Signaux
 
 > Un système client-serveur qui transmet des messages textuels en utilisant uniquement les signaux UNIX (`SIGUSR1` / `SIGUSR2`).
 
 ---
 
-## 🎯 Objectif
+## Objectif
 
 **Minitalk** implémente un protocole de communication entre deux processus utilisant exclusivement les signaux POSIX. Le **serveur** écoute en permanence et affiche les messages reçus, tandis que le **client** encode chaque caractère en une séquence de 8 signaux (représentation binaire) et les envoie bit par bit.
 
@@ -20,7 +20,7 @@ Ce projet permet de comprendre les **signaux UNIX**, la **communication inter-pr
 
 ---
 
-## ⚙️ Protocole de Communication
+## Protocole de Communication
 
 ### Encodage binaire
 
@@ -63,7 +63,7 @@ Le client **attend l'accusé de réception** (ACK) du serveur avant d'envoyer ch
 
 ---
 
-## 🚀 Utilisation
+## Utilisation
 
 ### Démarrer le serveur
 
@@ -90,23 +90,23 @@ Server PID: 12345
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
                CLIENT                                  SERVER
     ┌──────────────────────────┐            ┌──────────────────────────┐
-    │  main(server_pid, msg)   │            │  main() → affiche PID   │
+    │  main(server_pid, msg)   │            │  main() → affiche PID    │
     │         │                │            │         │                │
-    │    send_bit(pid, char)   │  SIGUSR1/2 │    handler(sig, info)   │
-    │    ┌────┴─────┐         │ ─────────► │    ┌────┴─────┐         │
-    │    │ Extraction│         │            │    │ Accum.   │         │
-    │    │ bit par   │         │            │    │ des bits │         │
-    │    │ bit (>> &)│         │            │    │ (|= <<)  │         │
-    │    └────┬─────┘         │            │    └────┬─────┘         │
-    │    Attend ACK ◄─────────│── SIGUSR1 ─│── kill(client, SIGUSR1) │
+    │    send_bit(pid, char)   │  SIGUSR1/2 │    handler(sig, info)    │
+    │    ┌────┴──────┐         │ ─────────► │    ┌────┴─────┐          │
+    │    │ Extraction│         │            │    │ Accum.   │          │
+    │    │ bit par   │         │            │    │ des bits │          │
+    │    │ bit (>> &)│         │            │    │ (|= <<)  │          │
+    │    └────┬──────┘         │            │    └────┬─────┘          │
+    │    Attend ACK  ◄─────────│── SIGUSR1 ─│── kill(client, SIGUSR1)  │
     │    (g_ack flag)          │            │         │                │
-    │         │                │            │    8 bits → putchar()   │
-    │    Bit suivant...        │            │         │                │
+    │         │                │            │    8 bits → putchar()    │
+    │    Bit suivant...        │            │                          │
     └──────────────────────────┘            └──────────────────────────┘
 ```
 
@@ -121,7 +121,7 @@ Server PID: 12345
 
 ---
 
-## 🛡️ Robustesse
+## Robustesse
 
 | Aspect | Implémentation |
 |--------|---------------|
@@ -133,7 +133,7 @@ Server PID: 12345
 
 ---
 
-## 🛠️ Compilation
+## Compilation
 
 ```bash
 make          # Compile server et client
@@ -144,7 +144,7 @@ make re       # Recompilation
 
 ---
 
-## 🔑 Compétences Développées
+## Compétences Développées
 
 - **Signaux UNIX** : `SIGUSR1`, `SIGUSR2`, `sigaction`, `kill`
 - **Communication inter-processus (IPC)** : conception d'un protocole binaire

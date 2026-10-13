@@ -5,15 +5,15 @@
 
 [Home](../../../README.md)
 
-# 🐾 C++ Module 04 — Polymorphisme et classes abstraites
+# C++ Module 04 — Polymorphisme et classes abstraites
 
 > Utilisation du polymorphisme de sous-type, des fonctions virtuelles et des interfaces en C++.
 
-## 🎯 Objectif
+## Objectif
 
 Les exercices partent d'une hiérarchie `Animal`, `Dog` et `Cat`, puis introduisent une classe abstraite, une classe `Brain` et enfin un système de matières avec personnages et interfaces.
 
-## 📚 Exercices
+## Exercices
 
 | Exercice | Projet | Notions principales |
 |----------|--------|---------------------|
@@ -22,7 +22,7 @@ Les exercices partent d'une hiérarchie `Animal`, `Dog` et `Cat`, puis introduis
 | `ex02` | [AAnimal](ex02) | Classe abstraite et fonctions virtuelles pures |
 | `ex03` | [Materia](ex03) | Interfaces, matières et polymorphisme avancé |
 
-## 🚀 Utilisation
+## Utilisation
 
 ```bash
 cd ex03
@@ -30,7 +30,7 @@ make
 ./animal
 ```
 
-## 🔑 Compétences développées
+## Compétences développées
 
 - Polymorphisme dynamique
 - Fonctions virtuelles et destructeurs virtuels

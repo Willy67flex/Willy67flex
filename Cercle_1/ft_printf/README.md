@@ -6,13 +6,13 @@
 
 [Home](../../README.md)
 
-# 🖨️ ft_printf — Réimplémentation de printf
+# ft_printf — Réimplémentation de printf
 
 > Recoder la fonction `printf` de la libc en gérant les arguments variadiques et les conversions de format.
 
 ---
 
-## 🎯 Objectif
+## Objectif
 
 **ft_printf** reproduit le comportement de la fonction `printf()` de la bibliothèque standard C. Ce projet introduit le concept de **fonctions variadiques** (`va_list`, `va_start`, `va_arg`, `va_end`) et l'analyse d'une chaîne de format avec spécificateurs de conversion.
 
@@ -20,7 +20,7 @@ La fonction retourne le nombre total de caractères imprimés, comme la vraie `p
 
 ---
 
-## 📋 Spécificateurs Supportés
+## Spécificateurs Supportés
 
 | Spécificateur | Type | Description | Exemple |
 |:---:|---|---|---|
@@ -36,7 +36,7 @@ La fonction retourne le nombre total de caractères imprimés, comme la vraie `p
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ft_printf(format_string, ...)
@@ -72,7 +72,7 @@ ft_printf(format_string, ...)
 
 ---
 
-## 🛠️ Compilation & Utilisation
+## Compilation & Utilisation
 
 ```bash
 # Compiler la bibliothèque
@@ -111,7 +111,7 @@ Hex: ff | HEX: FF
 
 ---
 
-## 📂 Structure du Projet
+## Structure du Projet
 
 ```
 ft_printf/
@@ -130,7 +130,7 @@ ft_printf/
 
 ---
 
-## 🔑 Compétences Développées
+## Compétences Développées
 
 - **Fonctions variadiques** : maîtrise de `va_list` et de l'extraction d'arguments typés dynamiquement
 - **Parsing de format** : analyse caractère par caractère d'une chaîne de spécificateurs

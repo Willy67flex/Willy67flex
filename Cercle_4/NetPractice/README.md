@@ -6,11 +6,11 @@
 
 [Home](../../README.md)
 
-# 🌐 NetPractice — Adressage et routage réseau
+# NetPractice — Adressage et routage réseau
 
 > Atelier interactif pour maîtriser adressage IP, masques CIDR, passerelles par défaut et routage statique, avec visualisation avant/après (`lvl/` ➜ `correction/`) et exports `git/level*.json`.
 
-## 🎯 Objectif
+## Objectif
 
 NetPractice est un entraînement interactif dans le navigateur. Le but est de configurer les adresses IP, masques, passerelles et routes de chaque niveau afin de rétablir la connectivité entre les machines.
 
@@ -20,7 +20,7 @@ Chaque niveau dispose :
 
 Ces artefacts montrent comment les IP, masques et routes ont été ajustés pour rétablir la connectivité.
 
-## 🗺️ Notions rencontrées
+## Notions rencontrées
 - **Level 1 — LAN unique :** IPs cohérentes + même masque pour tous → tout le monde dans le même sous-réseau.
 - **Level 2 — Masques vs classes :** corriger un masque implicite trop large (126.x en /8) vers un `/27` partagé.
 - **Level 3 — Dimensionner en /25 :** deux hôtes dans la même plage, éviter adresse réseau/broadcast.
@@ -32,7 +32,7 @@ Ces artefacts montrent comment les IP, masques et routes ont été ajustés pour
 - **Level 9 — Deux préfixes (/25 + /18) :** transit /30, next-hop distinct pour chaque préfixe, redistribution vers “Internet”.
 - **Level 10 — Masques mixtes :** /25, /26, /30 ; passerelles par segment, défaut sur le cœur, annonce du /24 partagé.
 
-## 🚀 Utilisation
+## Utilisation
 
 ### Lancer l'interface
 
@@ -57,7 +57,7 @@ Prérequis : Python 3, `ss` et `xdg-open` ou `open` pour l'ouverture automatique
 
 Les exemples de solutions sont conservés dans `submission/`.
 
-## 🧠 Compétences développées
+## Compétences développées
 
 - Adressage IPv4 et notation CIDR
 - Calcul des adresses réseau, broadcast et plages d'hôtes
@@ -66,7 +66,7 @@ Les exemples de solutions sont conservés dans `submission/`.
 - Compréhension des rôles des switches et routeurs
 - Cheminement des paquets entre les couches 2 et 3 du modèle OSI
 
-## 📂 Structure du projet
+## Structure du projet
 
 ```text
 NetPractice/
@@ -76,7 +76,7 @@ NetPractice/
 └── net_practice.1.9/  # Interface web et script de lancement
 ```
 
-## 📚 Ressources
+## Ressources
 
 - [Subnetting Cheat Sheet](https://www.aelius.com/njh/subnet_sheet.html)
 - [NetPractice — documentation complémentaire](https://github.com/lpaube/NetPractice)

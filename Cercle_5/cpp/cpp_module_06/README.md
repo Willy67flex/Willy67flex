@@ -5,15 +5,15 @@
 
 [Home](../../../README.md)
 
-# 🔄 C++ Module 06 — Casts et conversions
+# C++ Module 06 — Casts et conversions
 
 > Compréhension des conversions de types et des opérateurs de cast en C++.
 
-## 🎯 Objectif
+## Objectif
 
 Les exercices traitent la conversion scalaire, la sérialisation d'adresses et l'identification dynamique du type réel d'objets via une hiérarchie polymorphe.
 
-## 📚 Exercices
+## Exercices
 
 | Exercice | Projet | Notions principales |
 |----------|--------|---------------------|
@@ -21,7 +21,7 @@ Les exercices traitent la conversion scalaire, la sérialisation d'adresses et l
 | `ex01` | [Serializer](ex01) | Conversion pointeur/entier et retour vers un pointeur |
 | `ex02` | [Identify](ex02) | `dynamic_cast`, RTTI et identification de types |
 
-## 🚀 Utilisation
+## Utilisation
 
 ```bash
 cd ex00
@@ -29,7 +29,7 @@ make
 ./convert 42.0f
 ```
 
-## 🔑 Compétences développées
+## Compétences développées
 
 - `static_cast`, `reinterpret_cast` et `dynamic_cast`
 - Analyse et validation de chaînes numériques

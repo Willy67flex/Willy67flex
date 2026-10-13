@@ -5,15 +5,15 @@
 
 [Home](../../../README.md)
 
-# 🤖 C++ Module 03 — Héritage
+# C++ Module 03 — Héritage
 
 > Construction d'une famille de robots pour comprendre l'héritage simple et multiple.
 
-## 🎯 Objectif
+## Objectif
 
 À partir de `ClapTrap`, les exercices ajoutent des spécialisations et des comportements spécifiques avec `ScavTrap`, `FragTrap` et `DiamondTrap`. Le module insiste sur l'ordre de construction, la visibilité et la résolution des membres hérités.
 
-## 📚 Exercices
+## Exercices
 
 | Exercice | Projet | Notions principales |
 |----------|--------|---------------------|
@@ -22,7 +22,7 @@
 | `ex02` | [FragTrap](ex02) | Extension d'une hiérarchie de classes |
 | `ex03` | [DiamondTrap](ex03) | Héritage multiple et héritage en diamant |
 
-## 🚀 Utilisation
+## Utilisation
 
 ```bash
 cd ex03
@@ -30,7 +30,7 @@ make
 ./ClapTrap
 ```
 
-## 🔑 Compétences développées
+## Compétences développées
 
 - Héritage et réutilisation de code
 - Constructeurs et destructeurs dans une hiérarchie
